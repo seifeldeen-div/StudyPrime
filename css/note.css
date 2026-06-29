@@ -43,7 +43,7 @@ ul {
 
                 .card {
                         width: 100%;
-                        padding:0px 10px;
+                        padding: 0px 10px;
                         opacity: 0;
                         animation: fadeUP 1s 1s ease forwards;
 
@@ -60,7 +60,8 @@ ul {
 
                                 textarea {
                                         width: 100%;
-                                        height: calc(100vh - (390px));
+                                        /* height: calc(100vh - (390px)); */
+                                        height: 250px;
                                         border: 1px solid var(--pink);
                                         outline: 0;
                                         border-radius: 16px;

@@ -7,33 +7,33 @@ we have three steps
 const cacheName = "App_v1";
 const cacheAssets = [
     //root
-    "/",
-    "/index.html",
+    "./",
+    "./index.html",
     //style
-    "/css/style.css",
-    "/css/home.css",
-    "/css/goals.css",
-    "/css/navHeader.css",
-    "/css/note.css",
-    "/css/timer.css",
-    "/css/todoList.css",
+    "./css/style.css",
+    "./css/home.css",
+    "./css/goals.css",
+    "./css/navHeader.css",
+    "./css/note.css",
+    "./css/timer.css",
+    "./css/todoList.css",
     //js
-    "/js/index.js",
-    "/js/main.js",
-    "/js/goals.js",
-    "/js/navHeader.js",
-    "/js/note.js",
-    "/js/timer.js",
-    "/js/todoList.js",
+    "./js/index.js",
+    "./js/main.js",
+    "./js/goals.js",
+    "./js/navHeader.js",
+    "./js/note.js",
+    "./js/timer.js",
+    "./js/todoList.js",
     //pages
-    "/pages/home.html",
-    "/pages/goals.html",
-    "/pages/note.html",
-    "/pages/timer.html",
-    "/pages/todoList.html",
+    "./pages/home.html",
+    "./pages/goals.html",
+    "./pages/note.html",
+    "./pages/timer.html",
+    "./pages/todoList.html",
     //info
-    "/assets/imgs/icon.png",
-    "/manifest.json",
+    "./assets/imgs/icon.png",
+    "./manifest.json",
 ];
 
 // install

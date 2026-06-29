@@ -16,11 +16,9 @@ if ('serviceWorker' in navigator) {
 }
 
 // Installing App
-
-// -----------------------Installing App-------------------------------
-// -----------------------Installing App-------------------------------
 let deferredPrompt;
 const installBtn = document.querySelector('#installBtn');
+console.log(installBtn)
 
 window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault();
@@ -30,18 +28,14 @@ window.addEventListener('beforeinstallprompt', e => {
 
 installBtn.addEventListener('click', () => {
     if (!deferredPrompt) {
-        console.log("No install prompt available");
         return;
     }
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choice) => {
+        console.log("User choice:", choice.outcome);
         if (choice.outcome === 'accepted') {
             installBtn.style.display = 'none';
         }
         deferredPrompt = null;
     });
 });
-
-if (window.matchMedia('(display-mode: standalone)').matches) {
-    installBtn.style.display = 'none';
-}

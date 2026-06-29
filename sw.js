@@ -66,27 +66,18 @@ self.addEventListener("activate", (event) => {
 
 // fetch
 self.addEventListener("fetch", (event) => {
+    if (event.request.method !== "GET") return;
     event.respondWith(
-        caches.match(event.request)
-            .then(
-                cacheResponse => {
-                    if (cacheResponse)
-                        return cacheResponse
-                    return fetch(event.request)
-                        .then(
-                            networkResponse => {
-                                return caches.open(cacheName)
-                                    .then(
-                                        cache => {
-                                            cache.put(event.request, networkResponse.clone())
-                                            return networkResponse
-                                        }
-                                    )
-                            }
-                        )
-                }
-            ).catch(
-                Error => console.log(Error("Erorr Happend"))
-            )
-    )
-})
+        fetch(event.request)
+            .then((networkResponse) => {
+                return caches.open(cacheName).then((cache) => {
+                    if (networkResponse.ok)
+                        cache.put(event.request, networkResponse.clone());
+                    return networkResponse;
+                });
+            })
+            .catch(() => {
+                return caches.match(event.request);
+            })
+    );
+});

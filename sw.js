@@ -4,7 +4,7 @@ we have three steps
 2 => activate(upcoming versions)
 3 => fetch from cash or from internet
 */
-const cacheName = "App_V12";
+const cacheName = "App_v1";
 const cacheAssets = [
     //root
     "/",

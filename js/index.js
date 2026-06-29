@@ -16,44 +16,25 @@ if ('serviceWorker' in navigator) {
 }
 
 // Installing App
+
+// -----------------------Installing App-------------------------------
 let deferredPrompt;
-const installBtn = document.querySelector("#installBtn");
 
-window.addEventListener("beforeinstallprompt", (e) => {
+window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault();
-
     deferredPrompt = e;
-
-    if (installBtn) {
-        installBtn.style.display = "block";
-        // installBtn.style.animation = "fadebtn 0.8s 0.5s ease-out forwards";
-    }
+    btn.style.display = 'block';
 });
 
-if (installBtn) {
-    installBtn.addEventListener("click", async () => {
-        if (!deferredPrompt) return;
-
-        deferredPrompt.prompt();
-        const choice = await deferredPrompt.userChoice;
-
-        if (choice.outcome === "accepted") {
-            installBtn.style.display = "none";
-        }
+document.querySelector('#installBtn').addEventListener('click', () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choice) => {
+        if (choice.outcome === 'accepted')
+            document.querySelector('#installBtn').style.display = 'none';
         deferredPrompt = null;
     });
-}
-
-// Hide the button if the app is already installed
-if (installBtn && window.matchMedia("(display-mode: standalone)").matches) {
-    installBtn.style.display = "none";
-}
-
-// Hide the button after successful installation
-window.addEventListener("appinstalled", () => {
-    if (installBtn) {
-        installBtn.style.display = "none";
-    }
-
-    deferredPrompt = null;
 });
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    document.querySelector('#installBtn').style.display = 'none';
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyPrime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192x192.png">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            TRUSTED BY 50,000+ STUDENTS
+        </div>
+
+        <h1 class="headline">
+            <span class="line-white">Master Your</span>
+            <span class="line-white">Time,</span>
+            <span class="line-gradient">Master Your</span>
+            <span class="line-gradient">Future.</span>
+        </h1>
+
+        <p class="description">
+            StudyPrime helps you build deep focus habits with the
+            Pomodoro method — structured sessions,
+            and zero distractions.
+        </p>
+
+        <div class="buttons">
+            <a href="pages/home.html" class="btn btn-primary">
+                <span class="btn-icon">&#9654;</span>
+                Start Focusing Now
+            </a>
+            <button class="btn btn-secondary">
+                <span class="btn-icon">&#11123;</span>
+                Download App
+            </button>
+        </div>
+    </div>
+    <!-- developers -->
+    <p class="footer">
+        <span>
+            Developed by
+        </span>
+        <a href="">
+            Eng Seif Eldeen
+        </a>
+        &
+        <a href="">
+            Eng Haneen Walid
+        </a>
+    </p>
+    <!-- web phone -->
+    <div class="webPhone">
+        <h1>Web App Phone</h1>
+        <h2>Open Your Phone To Show Content</h2>
+    </div>
+    <!-- loader -->
+    <div class="loaderContainer">
+        <span class="loader"></span>
+    </div>
+    <!-- script main file -->
+    <script>
+        let loaderContainer = document.querySelector(".loaderContainer")
+        window.setTimeout(() => {
+            loaderContainer.classList.add("hideLoader")
+            setTimeout(() => {
+                loaderContainer.style.display = "none"
+            }, 2000)
+        }, 2000)
+    </script>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

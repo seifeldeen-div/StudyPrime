@@ -1,0 +1,463 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-purple-vibrant: #7c3aed;
+    --color-purple-deep: #5b21b6;
+    --color-purple-light: #a78bfa;
+    --color-purple-extra-light: #ddd6fe;
+    --color-purple-500: oklch(62.7% .265 303.9);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    /* background: #191c3a; */
+    /* background-color: #1A1633; */
+}
+
+ul {
+    list-style: none;
+}
+
+@media screen and (max-width: 426px) {
+    .webPhone {
+        display: none;
+    }
+
+    main {
+        .card {
+            padding: 10px;
+            animation: fadeUP 1s 1s ease forwards;
+            opacity: 0;
+
+            .container {
+                text-align: center;
+                animation: glow-pulse 3s ease-in-out infinite;
+
+                /* border: solid; */
+                padding: 20px 0 0;
+                border-radius: 20px;
+                /* background-color: #0e1b3d; */
+                box-shadow: 0 10px 30px -5px rgba(6, 182, 212, 0.3);
+
+
+                .heading {
+                    margin-bottom: 0px;
+
+                    p {
+                        color: var(--color-purple-light);
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+
+                .timer {
+                    /* margin-bottom: 10px; */
+
+                    p {
+                        font-size: 90px;
+                        font-weight: 700;
+                        background: linear-gradient(to right, #e040a0, #b07cc6);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+                }
+
+                .controlBtn {
+                    button {
+                        margin: 10px;
+                        outline: none;
+                        border: none;
+                        padding: 0px 35px;
+                        border-radius: 10px;
+                    }
+
+                    .start {
+                        background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+                        padding: 15px 35px;
+                        border-radius: 20px;
+                        color: white;
+                        letter-spacing: 0.8px;
+                        font-size: 17px;
+
+                        i {
+                            padding-right: 20px;
+                        }
+                    }
+
+                    .return {
+                        background-color: #07112b;
+                        margin-left: 0;
+                        color: #D1D5DC;
+                        padding: 18px 22px;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        }
+
+        .card2 {
+            animation: fadeUP 1s 1.2s ease forwards;
+            opacity: 0;
+            /* border: solid; */
+            /* padding: 00px; */
+            padding-bottom: 15px;
+            border-radius: inherit;
+            /* background: rgba(30, 41, 59, 0.7); */
+            /* backdrop-filter: blur(10px); */
+            /* border: 1px solid rgba(255, 255, 255, 0.1); */
+
+            .containerr {
+                text-align: center;
+                /* border: solid; */
+                /* padding: 20px 0; */
+                border-radius: 20px;
+
+                p {
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                    font-family: cursive;
+                    /* animation: float-slow 6s ease-in-out infinite; */
+                    animation: pulse-opacity 2s ease-in-out infinite;
+                }
+            }
+        }
+    }
+}
+
+main {
+    & .card {
+        & .container {
+            & .controlBtn {
+                & .start {
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* -------------------shineAimation----------------- */
+@keyframes shine {
+    from {
+        left: -120%;
+    }
+
+    to {
+        left: 150%;
+    }
+}
+
+/* ----------------------Fade animation------------------- */
+/* to top */
+@keyframes fadeUP {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* to right */
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* -------------------mode---------------------------- */
+
+.theamModeLight .sun {
+    animation: sunAnimateLight 0.5s ease forwards;
+}
+
+.theamModeLight .moon {
+    animation: moonAnimateLight 0.5s ease forwards;
+}
+
+.theamModeDark .sun {
+    animation: sunAnimateDark 0.5s ease forwards;
+}
+
+.theamModeDark .moon {
+    animation: moonAnimateDark 0.5s ease forwards;
+}
+
+
+/* for light */
+@keyframes sunAnimateLight {
+    from {
+        opacity: 1;
+        transform: rotate(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moonAnimateLight {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+/* for dark */
+@keyframes moonAnimateDark {
+    from {
+        opacity: 1;
+        transform: rotate(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sunAnimateDark {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+/* -----------------------volums---------------------- */
+
+.sound {
+    background: linear-gradient(135deg, #f97316 0%, #ec4899 100%) !important;
+}
+
+.mute {
+    background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%) !important;
+}
+
+.soundMode .sound {
+    animation: soundAnimate 0.5s ease forwards;
+}
+
+.soundMode .mute {
+    animation: muteAnimate 0.5s ease forwards;
+}
+
+.muteMode .sound {
+    animation: sound2Animate 0.5s ease forwards;
+}
+
+.muteMode .mute {
+    animation: mute2Animate 0.5s ease forwards;
+}
+
+/* for Sound */
+@keyframes soundAnimate {
+    from {
+        opacity: 1;
+        transform: rotate(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes muteAnimate {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+/* for Mute */
+@keyframes mute2Animate {
+    from {
+        opacity: 1;
+        transform: rotate(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sound2Animate {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px 0px rgba(124, 58, 237, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 0px rgba(124, 58, 237, 0.8),
+            0 0 20px rgba(6, 182, 212, 0.5);
+    }
+}
+
+@keyframes pulse-opacity {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ------------------------------light Mode------------------ */
+.lightTheam {
+    background-color: white;
+    transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    .card {
+        .container {
+            background-color: white;
+            transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+            .controlBtn {
+                .return {
+                    background-color: #7426f1;
+                    color: white;
+                    transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+                }
+            }
+        }
+    }
+
+    main {
+        .card2 {
+            .containerr {
+                background-color: white;
+                transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+            }
+        }
+    }
+}
+
+/* ---------------------------Dark Mode--------------- */
+.darkTheam {
+    .card {
+        .container {
+            background-color: #0e1b3d;
+            transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+            .controlBtn {
+                .return {
+                    background-color: #07112b;
+                    color: #D1D5DC;
+                    transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+                }
+            }
+        }
+    }
+
+    main {
+        .card2 {
+            .containerr {
+                background-color: #0e1b3d;
+                transition: 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+            }
+        }
+    }
+}
+
+/* -----------------------webPone-------------------- */
+@media screen and (min-width: 426px) {
+    .webPhone {
+        text-align: center;
+        position: absolute;
+        z-index: 99999999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

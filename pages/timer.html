@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyPrime</title>
+    <!-- main web app icon -->
+    <link rel="icon" href="../icons/icon-192x192.png">
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- page style -->
+    <link rel="stylesheet" href="../css/timer.css" />
+    <!-- header and nav style -->
+    <link rel="stylesheet" href="../css/navHeader.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header>
+        <div class="container">
+            <div class="top">
+                <div class="header-top-content">
+                    <h2 id="welcomeMessage" class="gradient-text">Mode State</h2>
+                    <p class="time">00:00:00 <span>PM</span></p>
+                    <p class="datePara">Monday, May 8</p>
+                </div>
+                <div class="header-top-icons-btns">
+                    <div id="darkLightMode" class="mode">
+                        <i class="fa-solid fa-moon moon"></i>
+                        <i class="fa-solid fa-sun sun"></i>
+                    </div>
+                    <div id="voluomMuteSound" class="volums">
+                        <i class="fa-solid fa-volume-xmark mute"></i>
+                        <i class="fa-solid fa-volume-high sound"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-qoute">
+                    <p class="quote">"Believe in your potential"</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start main -->
+    <main>
+        <div class="card">
+            <div class="container">
+                <div class="header">
+                    <p>stopwatch</p>
+                </div>
+                <div class="timer">
+                    <p>
+                        <span class="hours">00</span>:<span class="minutes">00</span>.<span class="seconds">00</span>
+                    </p>
+                </div>
+                <div class="controlBtns">
+                    <button class="start btn-label">
+                        <i class="fa-solid fa-play"></i>
+                        <span>start</span>
+                    </button>
+                    <button class="restart">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- end main -->
+    <!-- start nav -->
+    <nav class="navCardStyle">
+        <div class="container">
+            <ul>
+                <li class="active">
+                    <a class="link" href="home.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="todoList.html"><i class="fa-regular fa-calendar-check"></i></a>
+                </li>
+                <li>
+                    <a class="link" href="#"><i class="fa-regular fa-clock"></i></a>
+                </li>
+                <li>
+                    <a class="link" href="goals.html"><i class="fa-solid fa-bullseye"></i></a>
+                </li>
+                <!-- <li>
+                    <a class="link" href="#"><i class="fa-solid fa-hourglass-end"></i></a>
+                </li> -->
+                <li>
+                    <a class="link" href="note.html"><i class="fa-regular fa-note-sticky"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end nav -->
+    <!-- Background audio -->
+    <audio class="bg-audio" autoplay loop>
+    </audio>
+    <!-- error message on large screens -->
+    <div class="webPhone">
+        <h1>Web App Phone</h1>
+        <h2>Open Your Phone To Show Content</h2>
+    </div>
+    <!-- coming soon at next version -->
+    <div class="errorBadge">
+        <p></p>
+    </div>
+    <!-- js file -->
+    <script src="../js/timer.js"></script>
+    <!-- header and nav JS -->
+    <script src="../js/navHeader.js"></script>
+</body>
+
+</html>

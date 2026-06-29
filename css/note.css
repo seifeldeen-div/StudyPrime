@@ -60,7 +60,7 @@ ul {
 
                                 textarea {
                                         width: 100%;
-                                        height: calc(100vh - (430px));
+                                        height: calc(100vh - (480px));
                                         border: 1px solid var(--pink);
                                         outline: 0;
                                         border-radius: 16px;

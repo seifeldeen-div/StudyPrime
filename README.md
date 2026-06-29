@@ -35,5 +35,6 @@ PageDescriptionhome.htmlLanding screen with the Pomodoro timertimer.htmlDedicate
  ## Developed By
 
 
-Eng. Seif Eldeen
-Eng. Haneen Walid
+<a href="https://www.linkedin.com/in/seifeldeen-div/">Eng. Seif Eldeen</a>
+<br>
+<a href="https://www.linkedin.com/in/haneen-waleed-abedlwahed/">Eng. Haneen Walid</a>

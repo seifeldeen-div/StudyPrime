@@ -3,9 +3,6 @@
 🔗 Live Demo: seifeldeen-div.github.io/StudyPrime
 
 
-🇪🇬 العربي تحت 🇬🇧 الإنجليزي مباشرة.
-
-
 
 
 ## 🇬🇧 English

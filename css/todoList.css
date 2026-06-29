@@ -107,7 +107,7 @@ ul {
 
     main .container .table-tasks {
         ul {
-            height: calc(100vh - (470px));
+            height: calc(100vh - (500px));
             overflow-y: scroll;
 
             p {

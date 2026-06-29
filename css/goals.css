@@ -13,7 +13,7 @@
         --color-cyan-neon: #06b6d4;
         --glass-background: #1e293bb3;
         --background-dark: #10182e;
-        --pink:#ec4899;
+        --pink: #ec4899;
         --orange: #f97316;
         --gradient-cyan-blue: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
         --gradient-orange-pink: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
@@ -34,7 +34,7 @@ ul {
 }
 
 
-.completed{
+.completed {
         text-decoration: line-through;
 }
 
@@ -44,76 +44,90 @@ ul {
         }
 
         /* main style */
-        main{
+        main {
                 width: 100%;
+
                 /* height: calc(100vh - (280px)); */
-                .card{
+                .card {
                         width: 100%;
                         padding: 0px 10px;
                         opacity: 0;
                         animation: fadeUP 1s 1s ease forwards;
-                        .container{
+
+                        .container {
                                 width: 100%;
                                 box-shadow: 0 5px 20px 0px rgba(124, 58, 237, 0.2);
                                 border-radius: 20px;
                                 padding: 20px;
-                                .header{
+
+                                .header {
                                         display: flex;
                                         align-items: center;
                                         color: var(--orange);
                                         margin-bottom: 15px;
                                 }
-                                .goalsIn{
+
+                                .goalsIn {
                                         width: 100%;
                                         display: flex;
+
                                         form {
                                                 display: flex;
                                                 justify-content: space-between;
                                                 align-items: center;
                                                 width: 100%;
-                                                input{
-                                                outline: 0px;
-                                                border: 1px solid var(--orange);
-                                                background-color: transparent;
-                                                padding: 15px;
-                                                border-radius: 15px;
-                                                width: 100%;
-                                                margin-right: 8px;
-                                                color: white;
-                                                font-size: 15px;
-                                                &:focus{
-                                                        border: 2px solid var(--orange);
+
+                                                input {
+                                                        outline: 0px;
+                                                        border: 1px solid var(--orange);
+                                                        background-color: transparent;
+                                                        padding: 15px;
+                                                        border-radius: 15px;
+                                                        width: 100%;
+                                                        margin-right: 8px;
+                                                        color: white;
+                                                        font-size: 15px;
+
+                                                        &:focus {
+                                                                border: 2px solid var(--orange);
+                                                        }
+
+                                                        &::placeholder {
+                                                                color: #858ea1e2;
+                                                        }
                                                 }
-                                                &::placeholder{
-                                                        color: #858ea1e2;
+
+                                                .add {
+                                                        padding: 16px 20px;
+                                                        border-radius: 15px;
+                                                        border: 0px;
+                                                        background: var(--gradient-orange-pink);
+                                                        color: white;
+
                                                 }
                                         }
-                                        .add{
-                                                padding: 16px 20px;
-                                                border-radius: 15px;
-                                                border: 0px;
-                                                background: var(--gradient-orange-pink);
-                                                color: white;
-                                                
-                                        }
-                                        }
-                                        
+
                                 }
-                                .goalsArea{
+
+                                .goalsArea {
                                         width: 100%;
                                         color: #858ea1e2;
                                         /* height: 200px; */
-                                        height: calc(100vh - (420px));
+                                        /* height: calc(100vh - (420px)); */
+                                        height: calc(100vh - (570px));
                                         padding: 20px 0px;
                                         overflow-y: scroll;
-                                        .empty{
+
+                                        .empty {
                                                 text-align: center;
                                                 padding: 20px;
-                                                color: #858ea1e2;;
+                                                color: #858ea1e2;
+                                                ;
                                                 animation: fadeUP 0.8s 0.9s ease forwards;
                                                 opacity: 0;
                                         }
-                                        .goal{
+
+                                        .goal {
                                                 width: 100%;
                                                 display: flex;
                                                 justify-content: space-between;
@@ -123,10 +137,12 @@ ul {
                                                 border: 1px solid var(--pink);
                                                 border-radius: 15px;
                                                 cursor: pointer;
-                                                p{
-                                                        color:  var(--pink);
+
+                                                p {
+                                                        color: var(--pink);
                                                 }
-                                                button{
+
+                                                button {
                                                         background-color: transparent;
                                                         border: 0px;
                                                         color: oklch(70.4% .191 22.216);
@@ -159,11 +175,12 @@ ul {
 
 /* fade up animation */
 @keyframes fadeup {
-        from{
+        from {
                 opacity: 1;
                 transform: translateY(30px);
         }
-        to{
+
+        to {
                 opacity: 0;
                 transform: translateY(0px);
         }

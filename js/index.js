@@ -39,3 +39,13 @@ installBtn.addEventListener('click', () => {
         deferredPrompt = null;
     });
 });
+
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    installBtn.style.display = 'none';
+}
+
+window.addEventListener('appinstalled', () => {
+    console.log('App installed');
+    installBtn.style.display = 'none';
+    deferredPrompt = null;
+});

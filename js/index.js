@@ -6,12 +6,28 @@ if ('serviceWorker' in navigator) {
             .register("./sw.js")
             .then((registered) => {
                 console.log("Registered")
-                console.log(registered.active.state)
+                console.log(registered.active && registered.active.state)
+                registered.update();
+                registered.addEventListener("updatefound", () => {
+                    const newWorker = registered.installing;
+                    if (!newWorker) return;
+                    newWorker.addEventListener("statechange", () => {
+                        if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                            newWorker.postMessage({ type: "SKIP_WAITING" });
+                        }
+                    });
+                });
             })
             .catch((error) => {
                 console.log("Error Happend")
                 console.log(error)
             })
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+            if (refreshing) return;
+            refreshing = true;
+            window.location.reload();
+        });
     })
 }
 

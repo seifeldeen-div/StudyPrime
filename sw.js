@@ -4,7 +4,7 @@ we have three steps
 2 => activate(upcoming versions)
 3 => fetch from cash or from internet
 */
-const cacheName = "App_v2";
+const cacheName = "App_v3";
 const cacheAssets = [
     //root
     "./",
@@ -61,8 +61,15 @@ self.addEventListener("activate", (event) => {
                     )
                 }
             )
+            .then(() => self.clients.claim())
     )
 })
+
+self.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "SKIP_WAITING") {
+        self.skipWaiting();
+    }
+});
 
 // fetch
 self.addEventListener("fetch", (event) => {
